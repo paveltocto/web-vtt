@@ -1,26 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h3>Web VTT</h3>
+  <player-audio :audio="require('@/assets/ja-bt-civics-adv-citizen-audio001.mp3')"
+                :track="require('@/assets/ja-bt-civics-adv-citizen-audio001.vtt')" >
+    <player-audio-caption></player-audio-caption>
+  </player-audio>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import {PlayerAudio, PlayerAudioCaption} from "@/components/PlayerAudio";
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

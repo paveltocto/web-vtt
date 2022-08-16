@@ -5,7 +5,7 @@
 <script setup>
 import {watch, inject, ref, computed, onBeforeUnmount} from "vue";
 
-const player =  inject('player')
+const player =  inject('playerStatus')
 const currentCue =  ref(null)
 
 const textContentCue = computed(()=>{
@@ -15,6 +15,7 @@ const textContentCue = computed(()=>{
 
 const handlerCueChange = (e) => {
   currentCue.value = e.target.activeCues[0]
+  console.log('entroroor')
 }
 
 watch(
