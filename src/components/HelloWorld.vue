@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <player-audio>
+      <player-audio-caption></player-audio-caption>
+    </player-audio>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,8 +34,11 @@
 </template>
 
 <script>
+import PlayerAudio from "@/components/PlayerAudio";
+import PlayerAudioCaption from "@/components/PlayerAudio/PlayerAudioCaption";
 export default {
   name: 'HelloWorld',
+  components: {PlayerAudioCaption, PlayerAudio},
   props: {
     msg: String
   }
