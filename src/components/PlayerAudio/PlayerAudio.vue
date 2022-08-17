@@ -1,7 +1,6 @@
 <template>
   <div class="audio-player">
     <audio
-        crossorigin="anonymous"
         controls
         preload="auto"
         @loadeddata="onLoaded"
