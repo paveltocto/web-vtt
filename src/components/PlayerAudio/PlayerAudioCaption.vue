@@ -15,7 +15,6 @@ const textContentCue = computed(()=>{
 
 const handlerCueChange = (e) => {
   currentCue.value = e.target.activeCues[0]
-  console.log('entroroor')
 }
 
 watch(
@@ -28,7 +27,7 @@ watch(
 )
 
 onBeforeUnmount(()=>{
-  player.track.removeListener('cuechange', handlerCueChange)
+  player.track.removeEventListener('cuechange', handlerCueChange)
 })
 
 </script>
