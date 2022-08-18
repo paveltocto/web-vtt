@@ -3,11 +3,12 @@
     <audio
         controls
         preload="auto"
+        crossorigin="anonymous"
         @loadeddata="onLoaded"
         @timeupdate="onTimeUpdate"
         ref="audioRef" style="display: none">
-      <source :src="props.audio">
-      <track default :src="props.track" kind="subtitles" />
+      <source  :src="props.audio">
+      <track  default :src="props.track" kind="subtitles" />
     </audio>
     <button @click="onPlay">Play</button>
     <slot></slot>
